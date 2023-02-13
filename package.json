@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-invoices-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "swagger-autogen": "node ./swagger.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "nodemon": "nodemon"
+  },
+  "keywords": [],
+  "description": ""
+}
