@@ -5,17 +5,24 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
+    "seed": "node ./seeds",
     "swagger-autogen": "node ./swagger.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.16.3",
+    "fakerator": "^0.3.6",
+    "mongoose": "^6.9.1",
     "swagger-autogen": "^2.23.1",
-    "swagger-ui-express": "^4.6.0"
+    "swagger-ui-express": "^4.6.0",
+    "winston": "^3.8.2",
+    "xss-clean": "^0.1.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
-    "nodemon": "nodemon"
+    "nodemon": "^2.0.20"
   },
   "keywords": [],
   "description": ""

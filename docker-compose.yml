@@ -1,0 +1,31 @@
+version: '3'
+services:
+  server-app:
+    image: server
+    stdin_open: true
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db-app
+    networks:
+      - invoice-app
+  client-app:
+    image: client
+    ports:
+      - "3000:3000"
+    networks:
+      - invoice-app
+  db-app:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - invoice-app
+    volumes:
+      - db-data:/data/db
+networks:
+  invoice-app:
+    driver: bridge
+volumes:
+  db-data:
+    driver: local
